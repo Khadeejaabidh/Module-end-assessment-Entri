@@ -11,7 +11,7 @@ The project demonstrates basic Python programming concepts such as variables, in
 The Banking System includes the following features:
 
 - Account login using account number and PIN
-- Validation of login credentials
+- Validation of login credentials 
 - Deposit money into the account
 - Validation of deposit amount
 - Withdraw money from the account
