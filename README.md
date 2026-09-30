@@ -1,120 +1,38 @@
-# Module-end-assessment-Entri
-Banking System using Python
-# Bank Account Class
+# Banking System Using Python
 
-class BankAccount:
+## Project Description
 
-    def __init__(self, account_number, pin, balance):
-        self.account_number = account_number
-        self.pin = pin
-        self.balance = balance
+This mini project is a simple Banking System developed using Python.
 
+The project demonstrates basic Python programming concepts such as variables, input/output, conditional statements, loops, and arithmetic operations.
 
-    def login(self, username, password):
-        if username == self.account_number and password == self.pin:
-            print("Login Successful!")
-            print("Welcome, Khadeeja!")
-            return True
-        else:
-            print("Login Failed!")
-            print("Invalid Account Number/Username or PIN/Password.")
-            return False
+## Features
 
+The Banking System includes the following features:
 
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance = self.balance + amount
-            print("Deposit Successful!")
-            print("Deposited Amount: ₹", amount)
-            print("Current Balance: ₹", self.balance)
-        else:
-            print("Invalid amount!")
-            print("Deposit amount must be greater than zero.")
+- Account login using account number and PIN
+- Validation of login credentials
+- Deposit money into the account
+- Validation of deposit amount
+- Withdraw money from the account
+- Validation of withdrawal amount
+- Check available balance
+- Prevent withdrawal when the amount exceeds the available balance
+- Exit from the banking system
 
+## Technologies Used
 
-    def withdraw(self, amount):
-        if amount <= 0:
-            print("Invalid amount!")
-            print("Withdrawal amount must be greater than zero.")
+- Python
+- GitHub
 
-        elif amount > self.balance:
-            print("Insufficient Balance!")
-            print("Available Balance: ₹", self.balance)
+## Login Details
 
-        else:
-            self.balance = self.balance - amount
-            print("Withdrawal Successful!")
-            print("Withdrawn Amount: ₹", amount)
-            print("Remaining Balance: ₹", self.balance)
+For testing the program, use:
 
-
-    def check_balance(self):
-        print("Current Balance: ₹", self.balance)
-
-
-
-Creating an object
-account = BankAccount("KH1234", "1234", 5000)
-
-username = input("Enter Account Number / Username: ")
-password = input("Enter PIN / Password: ")
-
-logged_in = account.login(username, password)
-
-
-Enter Account Number / Username: KH1234
-Enter PIN / Password: 1234
-Login Successful!
-Welcome, Khadeeja!
+Account Number:
+```text
+123456
 
 
 
 
-Amount Deposit
-if logged_in:
-
-    amount = float(input("Enter amount to deposit: ₹"))
-
-    account.deposit(amount)
-
-else:
-
-    print("Please login first.")
-
-Enter amount to deposit: ₹5000
-Deposit Successful!
-Deposited Amount: ₹ 5000.0
-Current Balance: ₹ 10000.0
-
-
-
-
-Amount Withdrawal
-if logged_in:
-
-    amount = float(input("Enter amount to withdraw: ₹"))
-
-    account.withdraw(amount)
-
-else:
-
-    print("Please login first.")
-
-Enter amount to withdraw: ₹2500
-Withdrawal Successful!
-Withdrawn Amount: ₹ 2500.0
-Remaining Balance: ₹ 7500.0
-
-
-
-
-Check Balance
-if logged_in:
-
-    account.check_balance()
-
-else:
-
-    print("Please login first.")
-
-Current Balance: ₹ 7500.0
