@@ -5,9 +5,9 @@ account_number = "123456"
 pin = "1234"
 balance = 10000.0
 
-print("================================")
-print("       BANKING SYSTEM")
-print("================================")
+
+print("BANKING SYSTEM")
+
 
 # Account Login
 username = input("Enter account number: ")
